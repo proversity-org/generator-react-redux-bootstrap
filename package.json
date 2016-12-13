@@ -1,0 +1,33 @@
+{
+  "name": "generator-react-redux-bootstrap",
+  "version": "1.0.0",
+  "description": "Scaffold out a front-end web app with React, Redux, Webpack, Hot Loader and Bootstrap.",
+  "author": "José Antonio González Rodríguez",
+  "homepage": "https://github.com/proversity-org/generator-react-redux-bootstrap#readme",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/proversity-org/generator-react-redux-bootstrap.git"
+  },
+  "main": "generators/app/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "files": [
+    "generators/app"
+  ],
+  "keywords": [
+    "yeoman-generator",
+    "react",
+    "redux",
+    "bootstrap",
+    "webpack"
+  ],
+  "dependencies": {
+    "chalk": "^1.1.3",
+    "lodash": "^4.17.2",
+    "mkdirp": "^0.5.1",
+    "yeoman-generator": "^0.24.1",
+    "yosay": "^1.2.1"
+  }
+}
