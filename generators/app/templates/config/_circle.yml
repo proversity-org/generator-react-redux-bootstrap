@@ -1,0 +1,34 @@
+general:
+    branches:
+        only:
+            - master
+
+machine:
+  node:
+    version: 4.4.2
+  environment:
+    NODE_ENV: test
+    AWS_PROFILE: default
+    DESTINATION_BUCKET:
+    API_URL:
+
+dependencies:
+  pre:
+    - sudo apt-get update
+    - sudo apt-get install libfontconfig
+    - sudo apt-get install python-dev --fix-missing
+    - sudo pip install 'awsebcli==3.7.4'
+  override:
+    - npm install -g webpack
+    - npm install
+
+test:
+  override:
+    - npm test
+
+deployment:
+  production:
+    branch: master
+    commands:
+      - npm run build
+      - /bin/bash publish.sh

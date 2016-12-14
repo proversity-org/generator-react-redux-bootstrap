@@ -1,0 +1,16 @@
+
+@import url(https://fonts.googleapis.com/css?family=Lato:300,400,700&subset=latin-ext);
+
+$black-color: #323538;
+$blue-color: #06a8e0;
+$white-color: #ffffff;
+
+$font-family: 'Lato', Helvetica, sans-serif;
+
+body {
+	background-color: $white-color;
+  	color: $black-color;
+  	font-family: $font-family;
+	font-size: 16px;
+	font-weight: 400;
+}
