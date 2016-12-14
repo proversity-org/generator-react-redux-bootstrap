@@ -12,7 +12,7 @@ export default class Main extends Component {
     return (
       <div>
         <h2>RereBoo</h2>
-        <p>Your current app includes React, Redux, React Router, React Bootstrap, Webpack and Hot Loader.</p>
+        <p>Your current app includes React, Redux, React Router, React Bootstrap and Webpack.</p>
       </div>
     )
   }

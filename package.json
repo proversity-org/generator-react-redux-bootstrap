@@ -1,7 +1,7 @@
 {
   "name": "generator-rereboo",
   "version": "1.0.0",
-  "description": "Scaffold out a front-end web app with React, Redux, Webpack, Hot Loader and Bootstrap.",
+  "description": "Scaffold out a front-end web app with React, Redux, React Router, React Bootstrap and Webpack.",
   "author": "José Antonio González Rodríguez (Proversity.org Ltd)",
   "homepage": "https://github.com/proversity-org/generator-rereboo#readme",
   "license": "MIT",
