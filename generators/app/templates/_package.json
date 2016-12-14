@@ -1,0 +1,20 @@
+{
+  "name": "<%= name %>",
+  "version": "<%= version %>",
+  "description": "<%= description %>",
+  "main": "<%= main %>",
+  "scripts": {
+    "start": "node <%= main %>.js --env=dev",
+    "build": "NODE_ENV=production webpack -p --progress",
+    "test": "karma start",
+    "test:watch": "karma start --no-single-run --auto-watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "<%= repo %>"
+  },
+  "keywords": [],
+  "author": "<%= author %>",
+  "dependencies": {},
+  "devDependencies": {}
+}
