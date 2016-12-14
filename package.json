@@ -1,6 +1,6 @@
 {
   "name": "generator-rereboo",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Scaffold out a front-end web app with React, Redux, React Router, React Bootstrap and Webpack.",
   "author": "José Antonio González Rodríguez (Proversity.org Ltd)",
   "homepage": "https://github.com/proversity-org/generator-rereboo#readme",
@@ -14,7 +14,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "files": [
-    "generators/app"
+    "generators/app",
+    "generators/module"
   ],
   "keywords": [
     "yeoman-generator",
@@ -25,6 +26,7 @@
   ],
   "dependencies": {
     "chalk": "^1.1.3",
+    "html-wiring": "^1.2.0",
     "lodash": "^4.17.2",
     "mkdirp": "^0.5.1",
     "yeoman-generator": "^0.24.1",

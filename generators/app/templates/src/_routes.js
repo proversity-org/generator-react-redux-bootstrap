@@ -4,12 +4,14 @@ import React from 'react'
 import { Route, IndexRoute } from 'react-router'
 
 import App from './containers/App'
-import AsyncMain from './containers/AsyncMain'
+import AsyncPlaceholder from './containers/AsyncPlaceholder'
+// ----- yeoman hook import routes -----
 
 
 const routes = (
   <Route path="/" component={App}>
-    <IndexRoute component={AsyncMain} />
+    <IndexRoute component={AsyncPlaceholder} />
+	{/* ----- yeoman hook routes ----- */}
   </Route>
 )
 

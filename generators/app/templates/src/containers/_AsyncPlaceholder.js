@@ -2,15 +2,17 @@
 
 import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
-import { replace } from 'react-router-redux'
 import { Grid, Row, Col } from 'react-bootstrap'
 
-import Main from '../components/Main'
+import Placeholder from '../components/Placeholder'
 
-class AsyncMain extends Component {
+class AsyncPlaceholder extends Component {
   constructor(props) {
     super(props)
     this.state = {}
+  }
+
+  componentDidMount () {
   }
 
   componentWillMount () {
@@ -21,7 +23,7 @@ class AsyncMain extends Component {
       <Grid>
         <Row>
           <Col xs={12} sm={6} smOffset={3}>
-            <Main />
+            <Placeholder dispatch={this.props.dispatch} />
           </Col>
         </Row>
       </Grid>
@@ -29,7 +31,7 @@ class AsyncMain extends Component {
   }
 }
 
-AsyncMain.propTypes = {
+AsyncPlaceholder.propTypes = {
   dispatch: PropTypes.func.isRequired
 }
 
@@ -37,4 +39,4 @@ function mapStateToProps(state) {
   return {}
 }
 
-export default connect(mapStateToProps)(AsyncMain)
+export default connect(mapStateToProps)(AsyncPlaceholder)

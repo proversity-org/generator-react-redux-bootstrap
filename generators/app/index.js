@@ -69,6 +69,17 @@ module.exports = generators.Base.extend({
 
       this.config.set({'name': this.name});
 		},
+    indexHtml: function() {
+      this.fs.copyTpl(
+        this.templatePath('src/_index.html'),
+        this.destinationPath('src/index.html'),
+        {
+          name: this.name
+        }
+      );
+
+      this.config.set({'name': this.name});
+    },
     dotFiles: function() {
       const dotFolder = 'dotfiles/';
       const dotFiles = ['babelrc', 'editorconfig', 'eslintrc', 'gitignore'];
@@ -101,13 +112,13 @@ module.exports = generators.Base.extend({
     },
     srcFiles: function() {
       const srcFolder = 'src/';
-      const srcFiles = ['config.js', 'index.html', 'index.js', 'routes.js', 'stores.js'];
+      const srcFiles = ['config.js', 'index.js', 'routes.js', 'stores.js'];
       this._generateFiles(srcFolder, srcFiles, true);
     },
     srcSubFiles: function() {
       const srcSubFiles = [
-        ['components/', ['Main.js']],
-        ['containers/', ['App.js', 'AsyncMain.js']],
+        ['components/', ['Placeholder.js']],
+        ['containers/', ['App.js', 'AsyncPlaceholder.js']],
         ['helpers/', ['Request.js', 'Session.js']],
         ['reducers/', ['index.js']],
         ['static/', ['index.scss']]
@@ -119,11 +130,6 @@ module.exports = generators.Base.extend({
       srcSubFiles.map((subfile) => {
         this._generateFiles(`src/${subfile[FOLDER]}`, subfile[FILES], true, false);
       });
-
-      this.fs.copyTpl(
-        this.templatePath('config/_gitkeep'),
-        this.destinationPath('src/actions/.gitkeep')
-      );
     }
 	},
   install: function() {
